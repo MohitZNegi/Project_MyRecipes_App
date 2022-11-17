@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Project_MyRecipes_App.Views.AddPage">
+             x:Class="Project_MyRecipes_App.Views.AddPage" BackgroundColor="#f8c22c" Title="Add Recipe">
 
         
             <!-- Layout children vertically -->
-            <StackLayout Margin="20">
+    <StackLayout Margin="20" >
                 <Editor  Placeholder="Enter your title"
                 Text="{Binding Title}"
                 HeightRequest="100" />

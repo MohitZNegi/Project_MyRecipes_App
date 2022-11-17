@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Project_MyRecipes_App.Views.MyRecipes" Title="Recipes">
+             x:Class="Project_MyRecipes_App.Views.MyRecipes" Title="Recipes" BackgroundColor=" #ffe066">
 
     <!-- Add an item to the toolbar -->
     <ContentPage.ToolbarItems>
@@ -12,21 +12,24 @@
 
     <!-- Display Recipes in a list -->
     <StackLayout Margin="20,35,20,20">
-
+       
         <ScrollView>
         <CollectionView x:Name="collectionView" SelectionMode="Single" SelectionChanged="OnSelectionChanged">
             <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout>
-                        <Label Text="{Binding Title}"
-                               FontSize="Large" />
-                            <Label Text="{Binding CreatedBy}"
-                               TextColor="Silver"
+                <DataTemplate >
+                        <StackLayout BackgroundColor="#f8c22c"  >
+                    
+                        <Label  Padding="5" Text="{Binding Title}" FontAttributes="Bold"
+                               FontSize="Large" TextColor="#ff471a"/>
+                            <Label Padding="2"  Text="{Binding CreatedBy}" FontAttributes="Italic"
+                               TextColor="Black"
                                FontSize="Medium" />
-                        </StackLayout>
+                            <StackLayout BackgroundColor="#ffe066" HeightRequest="10"> </StackLayout>
+                            </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
         </ScrollView>
+   
     </StackLayout>
 </ContentPage>
